@@ -7,6 +7,8 @@ REM Version: 2.0
 REM Category: Prank
 REM This payload is based off the original Hak5 "QUACKED" payload, and was created for my own personal amusement 
 
+
+DELAY 500
 GUI r
 DELAY 200
 STRING powershell -windowstyle hidden
@@ -20,17 +22,23 @@ ENTER
 DELAY 500
 STRING $sp.Speak("you have been quacked.")
 ENTER
-DELAY 100
-STRING start firefox https://loginportal.funnyjunk.com/pictures/Mytril+urorubragg+taboo+quacked_d7d9b1_6228073.jpg
-ENTER
-DELAY 2000
-GUI r
 DELAY 200
+STRING start firefox https://loginportal.funnyjunk.com/pictures/Mytril+urorubragg+taboo+quacked_d7d9b1_6228073.jpg
+DELAY 500
+ENTER
+DELAY 1000
+GUI r
+DELAY 500
 STRING powershell -windowstyle hidden
 ENTER
-DELAY 200
+DELAY 500
 STRING start firefox https://www.youtube.com/watch?v=CRkzItBabzs
+DELAY 200
 ENTER
+DELAY 200
+SPACEBAR
+DELAY 500
+STRING F
 DELAY 2000
 ENTER
 STRING exit
